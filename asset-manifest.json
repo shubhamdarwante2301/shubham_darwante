@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/shubham_darwante/static/css/main.e6c13ad2.css",
-    "main.js": "/shubham_darwante/static/js/main.1c706b44.js",
+    "main.js": "/shubham_darwante/static/js/main.e8c3580f.js",
+    "static/media/Shubham_Darwante.pdf": "/shubham_darwante/static/media/Shubham_Darwante.d574fcfbbbdd4a4c3248.pdf",
     "index.html": "/shubham_darwante/index.html",
     "main.e6c13ad2.css.map": "/shubham_darwante/static/css/main.e6c13ad2.css.map",
-    "main.1c706b44.js.map": "/shubham_darwante/static/js/main.1c706b44.js.map"
+    "main.e8c3580f.js.map": "/shubham_darwante/static/js/main.e8c3580f.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.1c706b44.js"
+    "static/js/main.e8c3580f.js"
   ]
 }
