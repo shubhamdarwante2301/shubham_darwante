@@ -1,7 +1,8 @@
 import React from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Socialicons from "./Socialicons";
 import SkillAnimation from "./uiComponents/SkillAnimation";
+import ResumePDF from "../Shubham_Darwante.pdf"
 
 const HomeStyle = styled.div`
   background-color: #252734;
@@ -32,7 +33,7 @@ const Description = styled.p`
   margin-top: 1rem;
   font-size: 1.5rem;
 `;
-const Resume = styled.div`
+const Resume = styled.a`
   display: inline-block;
   border: 1px solid #858792;
   color: #ffffff;
@@ -61,8 +62,8 @@ const Icon = styled.i`
 `;
 
 const Animation = styled.div`
-  padding-right: 4vw; 
-   
+  padding-right: 4vw;
+
   @media (max-width: 920px) {
     display: none;
   }
@@ -79,6 +80,20 @@ const Animation = styled.div`
 // `;
 
 const Home = () => {
+  const downloadResume = () => {
+    fetch(ResumePDF).then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "shubham_darwante_resume";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <HomeStyle id="hero">
       <ProfileDetail>
@@ -86,7 +101,7 @@ const Home = () => {
         <Name>Shubham Darwante</Name>
         <Description>Front-End Developer</Description>
         <Socialicons />
-        <Resume>
+        <Resume onClick={downloadResume}>
           Get Resume
           <Icon
             className="fa-solid fa-download"

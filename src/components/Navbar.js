@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Link} from 'react-scroll'
 
 import HamburgerIcon from "./HamburgerIcon";
+import ResumePDF from "../Shubham_Darwante.pdf"
 
 const NavbarStyle = styled.div`
     background-color: #2a2c39;
@@ -97,6 +98,20 @@ const Navbar = () => {
     setToggle(!toggle);
   };
 
+  const downloadResume = () => {
+    fetch(ResumePDF).then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "shubham_darwante_resume";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <NavbarStyle>
       <Logo><Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>SHUBHAM.</Link></Logo>
@@ -120,7 +135,7 @@ const Navbar = () => {
           <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} onClick={()=>{handleToggle()}}>Contact</Link>
         </MenuItem>
       </Menu>
-      <Resume>
+      <Resume onClick={downloadResume}>
         Resume
         <i className="fa-solid fa-download" style={{ marginLeft: "0.5rem" }}></i>
       </Resume>
