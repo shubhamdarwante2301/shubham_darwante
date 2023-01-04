@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shubham_darwante/static/css/main.e6c13ad2.css",
+    "main.js": "/shubham_darwante/static/js/main.1c706b44.js",
+    "index.html": "/shubham_darwante/index.html",
+    "main.e6c13ad2.css.map": "/shubham_darwante/static/css/main.e6c13ad2.css.map",
+    "main.1c706b44.js.map": "/shubham_darwante/static/js/main.1c706b44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.1c706b44.js"
+  ]
+}
